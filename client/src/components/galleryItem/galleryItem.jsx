@@ -9,13 +9,13 @@ const GalleryItem = ({item}) => {
             <Image
                 urlEndpoint={import.meta.env.VITE_URL_IK_ENDPOINT} // Replace with your ImageKit URL endpoint
                 src={item.media} // The path to the image in your ImageKit media library
-                transformation={[{ width: 500, height: 500 }]}
+                transformation={[{ width: 500, height: 500, quality: 80 }]}
                 loading="lazy"
                 alt="Gallery Item"
             />
             <Link to={`/pin/${item.id}`} className="overlay"/>
             <button className="saveButton">Save</button>
-            <div class="overlayIcons">
+            <div className="overlayIcons">
                 <button>
                     <img src="/general/share.svg" alt="Share" />
                 </button>
