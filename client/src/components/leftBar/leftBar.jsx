@@ -9,7 +9,7 @@ const LeftBar = () => {
                 <a href="" className="menuIcon"><img src="/general/create.svg" alt="Categories" /></a>
                 <a href="" className="menuIcon"><img src="/general/updates.svg" alt="Updates" /></a>
                 <a href="" className="menuIcon"><img src="/general/messages.svg" alt="Messages" /></a>
-                <a href="" className="menuIcon"><img src="/general/messages.svg" alt="Messages" /></a>
+                <a href="" className="menuIcon"><img src="/general/settings.svg" alt="Settings" /></a>
             </div>
         </div>
     )

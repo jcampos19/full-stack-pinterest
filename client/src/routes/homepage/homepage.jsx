@@ -1,10 +1,9 @@
 import './homepage.css';
+import Gallery from '../../components/gallery/gallery';
 
 const Homepage = () => {
     return (
-        <div className="">
-            Homepage
-        </div>
+        <Gallery />
     )
 }
 
