@@ -1,18 +1,14 @@
 import './galleryItem.css';
 import {Link} from "react-router";  // React Router component for linking to different routes
-import { Image } from '@imagekit/react'; // Importing the ImageKit component for optimized image rendering
+// import { Image } from '@imagekit/react'; // Importing the ImageKit component for optimized image rendering
+import Image from '../image/image';
 
 const GalleryItem = ({item}) => {
+    const optimizedHeight = (372 / item.height) / item.width; // Calculate the optimized height based on the original aspect ratio
+
     return (
         <div className="galleryItem" style={{gridRowEnd:`span ${Math.ceil(item.height/100)}`}}>
-            {/* <img src={item.media} alt="" /> */}
-            <Image
-                urlEndpoint={import.meta.env.VITE_URL_IK_ENDPOINT} // Replace with your ImageKit URL endpoint
-                src={item.media} // The path to the image in your ImageKit media library
-                transformation={[{ width: 500, height: 500, quality: 80 }]}
-                loading="lazy"
-                alt="Gallery Item"
-            />
+            <Image path={item.media} alt="" w={372} h={optimizedHeight} />
             <Link to={`/pin/${item.id}`} className="overlay"/>
             <button className="saveButton">Save</button>
             <div className="overlayIcons">

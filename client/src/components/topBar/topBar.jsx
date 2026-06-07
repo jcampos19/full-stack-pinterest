@@ -1,4 +1,5 @@
 import UserButton from '../userButton/userButton';
+import Image from '../image/image';
 import './topBar.css';
 
 const TopBar = () => {
@@ -6,7 +7,7 @@ const TopBar = () => {
         <div className="topBar">
             {/* Search */}
             <div className='search'>
-                <img src="/general/search.svg" alt="" />
+                <Image path="/general/search.svg" alt="Search" />
                 <input type="text" placeholder='Search' />
             </div>
             <UserButton/>
